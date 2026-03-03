@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.ArrayList;
 
 /**
  * Store details of club memberships.
@@ -9,7 +10,7 @@ import java.util.*;
 public class Club
 {
     // Define any necessary fields here ...
-    private ArrayList<Membership> club;
+    private ArrayList<Membership> members;
     
     /**
      * Constructor for objects of class Club
@@ -17,7 +18,7 @@ public class Club
     public Club()
     {
         // Initialise any fields here ...
-        this.club = new ArrayList<>();
+        this.members = new ArrayList<>();
     }
 
     /**
@@ -26,6 +27,7 @@ public class Club
      */
     public void join(Membership member)
     {
+        members.add(member);
     }
 
     /**
@@ -34,6 +36,6 @@ public class Club
      */
     public int numberOfMembers()
     {
-        return club.size();
+        return members.size();
     }
 }
